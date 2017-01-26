@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   before_action :set_department
 
   def index
-    @products = Product.all.order(params[:sort])
+    redirect_to department_path(params[:department_id])
   end
 
   def show
