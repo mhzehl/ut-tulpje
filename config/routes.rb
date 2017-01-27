@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :index] do
     resources :orders
+    resources :profiles, only: [:show, :new, :create, :edit, :update]
   end
-  resources :profiles
   resources :departments do
     resources :products
   end

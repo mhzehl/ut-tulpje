@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
     @profile = current_user.build_profile(profile_params)
 
     if @profile.save
-      redirect_to edit_profile_path(@profile), notice: "Profile succesfully created"
+      redirect_to edit_user_profile_path(current_user, @profile), notice: "Profile succesfully created"
     else
       render :new
     end
